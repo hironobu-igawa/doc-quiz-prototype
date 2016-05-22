@@ -1,0 +1,23 @@
+{
+  "name": "dog-quiz-prototype",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Hironobu Igawa"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hironobu-igawa/dog-quiz-prototype",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.4",
+    "lodash": "^4.12.0",
+    "jquery-scope-watch": "https://github.com/hironobu-igawa/jquery-scope-watch.git#^0.1.0"
+  }
+}

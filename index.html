@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Dog Quiz</title>
+</head>
+<body>
+
+<header>
+  <h1>Dog Quiz</h1>
+  <label>問題数:<input id="request-count" type="number"></label>
+  <button id="reset">挑戦!</button>
+</header>
+
+<article>
+  <div id="quiz">
+    <img id="dog-image" src="">
+
+    <dl id="answers">
+      <dt>犬種名 <button id="show-name">表示</button></dt>
+      <dd id="name"></dd>
+
+      <dt>グループ <button id="show-group">表示</button></dt>
+      <dd id="group"></dd>
+
+      <dt>原産国 <button id="show-countries">表示</button></dt>
+      <dd id="countries">
+        <ul>
+          <script type="text/html" id="country-template">
+            <li></li>
+          </script>
+        </ul>
+      </dd>
+
+      <dt>毛色 <button id="show-colors">表示</button></dt>
+      <dd id="colors">
+        <ul>
+          <script type="text/html" id="color-template">
+            <li></li>
+          </script>
+        </ul>
+      </dd>
+
+      <dt>特徴・その他 <button id="show-characteristics">表示</button></dt>
+      <dd id="characteristics">
+        <ul>
+          <script type="text/html" id="characteristic-template">
+            <li></li>
+          </script>
+        </ul>
+      </dd>
+
+      <dt>初期の用途 <button id="show-initial-works">表示</button></dt>
+      <dd id="initial-works">
+        <ul>
+          <script type="text/html" id="initial-work-template">
+            <li></li>
+          </script>
+        </ul>
+      </dd>
+    </dl>
+
+    <div class="quiz-footer">
+      <div class="ratio">
+        <span class="current-no"></span> / <span class="count"></span>
+      </div>
+      <button class="feel-good">Good!</button>
+      <button class="feel-bad">Bad...</button>
+    </div>
+  </div>
+
+  <div id="result">
+    <h2>結果</h2>
+    <h3 class="perfect">Perfect!!</h3>
+    <h3 class="great">Great!</h3>
+    <h3 class="good">Good</h3>
+    <h3 class="bad">Bad...</h3>
+
+    <div class="ratio">
+      <span class="good-count"></span> / <span class="count"></span>
+    </div>
+  </div>
+</article>
+
+<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/bower_components/jquery-scope-watch/release/jquery-scope-watch.min.js"></script>
+<script type="text/javascript" src="/bower_components/lodash/dist/lodash.min.js"></script>
+<script type="text/javascript" src="/scripts/index.js"></script>
+<script type="text/javascript" src="/scripts/dog.js"></script>
+</body>

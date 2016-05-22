@@ -1,0 +1,23 @@
+{
+  "name": "dog-quiz-prototype",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hironobu-igawa/dog-quiz-prototype.git"
+  },
+  "author": "Hironobu Igawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hironobu-igawa/dog-quiz-prototype/issues"
+  },
+  "homepage": "https://github.com/hironobu-igawa/dog-quiz-prototype#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}
