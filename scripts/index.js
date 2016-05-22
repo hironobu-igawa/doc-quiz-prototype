@@ -97,6 +97,8 @@ $(function() {
     enumerable: true
   });
 
+  appScope.watch('dog', function() {$(window).scrollTop(0)});
+
   appScope.input('requestCount', '#request-count');
   appScope.click('#reset', 'reset()');
 
@@ -106,14 +108,17 @@ $(function() {
     appScope.attr('dog.imageURL', '#dog-image', 'src');
 
     appScope.click('#show-name', 'showName()');
+    appScope.hide('nameShowFlg', '#show-name');
     appScope.show('nameShowFlg', '#name');
     appScope.bind('dog.name', '#name');
 
     appScope.click('#show-group', 'showGroup()');
+    appScope.hide('groupShowFlg', '#show-group');
     appScope.show('groupShowFlg', '#group');
     appScope.bind('dog.group', '#group');
 
     appScope.click('#show-countries', 'showCountries()');
+    appScope.hide('countriesShowFlg', '#show-countries');
     appScope.show('countriesShowFlg', '#countries');
     var countryTemplate = $('#country-template').html();
     appScope.repeat('dog.countries', 'country', function(scope) {
@@ -123,6 +128,7 @@ $(function() {
     }).appendTo('#countries ul');
 
     appScope.click('#show-colors', 'showColors()');
+    appScope.hide('colorsShowFlg', '#show-colors');
     appScope.show('colorsShowFlg', '#colors');
     var colorTemplate = '<li>';
     appScope.repeat('dog.colors', 'color', function(scope) {
@@ -132,6 +138,7 @@ $(function() {
     }).appendTo('#colors ul');
 
     appScope.click('#show-characteristics', 'showCharacteristics()');
+    appScope.hide('characteristicsShowFlg', '#show-characteristics');
     appScope.show('characteristicsShowFlg', '#characteristics');
     var characteristicsTemplate = '<li>';
     appScope.repeat('dog.characteristics', 'characteristic', function(scope) {
@@ -141,6 +148,7 @@ $(function() {
     }).appendTo('#characteristics ul');
 
     appScope.click('#show-initial-works', 'showInitialWorks()');
+    appScope.hide('initialWorksShowFlg', '#show-initial-works');
     appScope.show('initialWorksShowFlg', '#initial-works');
     var initialWorksTemplate = '<li>';
     appScope.repeat('dog.initialWorks', 'initialWork', function(scope) {
