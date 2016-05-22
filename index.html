@@ -1,84 +1,137 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0," />
   <title>Dog Quiz</title>
-</head>
-<body>
 
-<header>
-  <h1>Dog Quiz</h1>
-  <label>問題数:<input id="request-count" type="number"></label>
-  <button id="reset">挑戦!</button>
+  <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/styles/index.css">
+</head>
+<body class="container">
+
+<header class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header"><h1>Dog Quiz</h1></div>
+  </div>
 </header>
 
 <article>
-  <div id="quiz">
-    <img id="dog-image" src="">
-
-    <dl id="answers">
-      <dt>犬種名 <button id="show-name">表示</button></dt>
-      <dd id="name"></dd>
-
-      <dt>グループ <button id="show-group">表示</button></dt>
-      <dd id="group"></dd>
-
-      <dt>原産国 <button id="show-countries">表示</button></dt>
-      <dd id="countries">
-        <ul>
-          <script type="text/html" id="country-template">
-            <li></li>
-          </script>
-        </ul>
-      </dd>
-
-      <dt>毛色 <button id="show-colors">表示</button></dt>
-      <dd id="colors">
-        <ul>
-          <script type="text/html" id="color-template">
-            <li></li>
-          </script>
-        </ul>
-      </dd>
-
-      <dt>特徴・その他 <button id="show-characteristics">表示</button></dt>
-      <dd id="characteristics">
-        <ul>
-          <script type="text/html" id="characteristic-template">
-            <li></li>
-          </script>
-        </ul>
-      </dd>
-
-      <dt>初期の用途 <button id="show-initial-works">表示</button></dt>
-      <dd id="initial-works">
-        <ul>
-          <script type="text/html" id="initial-work-template">
-            <li></li>
-          </script>
-        </ul>
-      </dd>
-    </dl>
-
-    <div class="quiz-footer">
-      <div class="ratio">
-        <span class="current-no"></span> / <span class="count"></span>
+  <div id="setting">
+    <div class="input-group">
+      <div class="input-group-addon">問題数</div>
+      <input class="request-count form-control" type="number">
+      <div class="input-group-btn">
+        <button class="challenge btn btn-primary" type="button">挑戦!</button>
       </div>
-      <button class="feel-good">Good!</button>
-      <button class="feel-bad">Bad...</button>
     </div>
+  </div>
+
+  <div id="quiz">
+    <img class="dog-image" src="">
+
+    <table class="table">
+      <tr>
+        <th>犬種名</th>
+        <td>
+          <button class="show-name btn btn-default btn-xs">表示</button>
+          <span class="name"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <th>グループ</th>
+        <td>
+          <button class="show-group btn btn-default btn-xs">表示</button>
+          <span class="group"></span>
+        </td>
+      </tr>
+
+      <tr>
+        <th>原産国</th>
+        <td>
+          <button class="show-countries btn btn-default btn-xs">表示</button>
+          <ul class="countries">
+            <script type="text/html" class="country-template">
+              <li></li>
+            </script>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <th>毛色</th>
+        <td>
+          <button class="show-colors btn btn-default btn-xs">表示</button>
+          <ul class="colors">
+            <script type="text/html" class="color-template">
+              <li></li>
+            </script>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <th>特徴・その他</th>
+        <td>
+          <button class="show-characteristics btn btn-default btn-xs">表示</button>
+          <ul class="characteristics">
+            <script type="text/html" class="characteristic-template">
+              <li></li>
+            </script>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <th>初期の用途</th>
+        <td>
+          <button class="show-initial-works btn btn-default btn-xs">表示</button>
+          <ul class="initial-works">
+            <script type="text/html" class="initial-work-template">
+              <li></li>
+            </script>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <nav class="quiz-footer navbar navbar-default navbar-fixed-bottom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="feel-good btn btn-success navbar-btn">Good!</button>
+          <button class="feel-bad btn btn-danger navbar-btn">Bad...</button>
+          <div class="ratio label label-default">
+            <span class="current-no"></span> / <span class="count"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 
   <div id="result">
     <h2>結果</h2>
-    <h3 class="perfect">Perfect!!</h3>
-    <h3 class="great">Great!</h3>
-    <h3 class="good">Good</h3>
-    <h3 class="bad">Bad...</h3>
 
-    <div class="ratio">
-      <span class="good-count"></span> / <span class="count"></span>
+    <div class="row">
+      <h3 class="perfect">Perfect!!</h3>
+      <h3 class="great">Great!</h3>
+      <h3 class="good">Good</h3>
+      <h3 class="bad">Bad...</h3>
     </div>
+
+    <div class="row">
+      <span class="ratio label label-default">
+        <span class="good-count"></span> / <span class="count"></span>
+      </span>
+    </div>
+
+    <nav class="result-footer navbar navbar-default navbar-fixed-bottom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="go-first btn btn-primary navbar-btn">最初から</button>
+        </div>
+      </div>
+    </nav>
   </div>
 </article>
 
