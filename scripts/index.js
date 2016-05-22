@@ -4,18 +4,15 @@ $(function() {
 
   appScope.init = function() {
     appScope.requestCount = 10;
-    appScope.refresh();
+    appScope.currentNo = 0;
+    appScope.goodCount = 0;
   };
 
-  appScope.refresh = function() {
+  appScope.challenge = function() {
     appScope.dogs = Dog.shuffle(appScope.requestCount);
     appScope.currentNo = 0;
     appScope.goodCount = 0;
     appScope.next();
-  };
-
-  appScope.reset = function() {
-    appScope.refresh();
   };
 
   appScope.showName = function() {
@@ -61,8 +58,20 @@ $(function() {
     appScope.initialWorksShowFlg = false;
   };
 
-  appScope.isFinish = function() {
-    return appScope.currentNo > appScope.count;
+  appScope.goFirst = function() {
+    appScope.dogs = null;
+  };
+
+  appScope.isSetting = function() {
+    return appScope.dogs == null;
+  };
+
+  appScope.isQuizMode = function() {
+    return !!appScope.dogs && appScope.currentNo <= appScope.count;
+  };
+
+  appScope.isResultMode = function() {
+    return !!appScope.dogs && appScope.currentNo > appScope.count;
   };
 
   appScope.isPerfect = function () {
@@ -75,16 +84,17 @@ $(function() {
   };
 
   appScope.isGood = function() {
-    if (appScope.isPerfect() || appScope.isGood()) return false;
-    return appScope.goodCount >= appScope.count * 0.4
+    if (appScope.isPerfect() || appScope.isGreat()) return false;
+    return appScope.goodCount >= appScope.count * 0.6;
   };
 
   appScope.isBad = function() {
-    return !(appScope.isFinish() || appScope.isGreat() || appScope.isGood());
+    return !(appScope.isPerfect() || appScope.isGreat() || appScope.isGood());
   };
 
   Object.defineProperty(appScope, 'dog', {
     get: function() {
+      if (appScope.dogs == null) return null;
       return appScope.dogs[appScope.currentNo - 1];
     },
     enumerable: true
@@ -99,63 +109,66 @@ $(function() {
 
   appScope.watch('dog', function() {$(window).scrollTop(0)});
 
-  appScope.input('requestCount', '#request-count');
-  appScope.click('#reset', 'reset()');
+  (function() {
+    appScope.show('isSetting()', '#setting');
+    appScope.input('requestCount', '#setting .request-count');
+    appScope.click('#setting .challenge', 'challenge()');
+  })();
 
   (function() {
-    appScope.hide('isFinish()', '#quiz');
+    appScope.show('isQuizMode()', '#quiz');
 
-    appScope.attr('dog.imageURL', '#dog-image', 'src');
+    appScope.attr('dog.imageURL', '#quiz .dog-image', 'src');
 
-    appScope.click('#show-name', 'showName()');
-    appScope.hide('nameShowFlg', '#show-name');
-    appScope.show('nameShowFlg', '#name');
-    appScope.bind('dog.name', '#name');
+    appScope.click('#quiz .show-name', 'showName()');
+    appScope.hide('nameShowFlg', '#quiz .show-name');
+    appScope.show('nameShowFlg', '#quiz .name');
+    appScope.bind('dog.name', '#quiz .name');
 
-    appScope.click('#show-group', 'showGroup()');
-    appScope.hide('groupShowFlg', '#show-group');
-    appScope.show('groupShowFlg', '#group');
-    appScope.bind('dog.group', '#group');
+    appScope.click('#quiz .show-group', 'showGroup()');
+    appScope.hide('groupShowFlg', '#quiz .show-group');
+    appScope.show('groupShowFlg', '#quiz .group');
+    appScope.bind('dog.group', '#quiz .group');
 
-    appScope.click('#show-countries', 'showCountries()');
-    appScope.hide('countriesShowFlg', '#show-countries');
-    appScope.show('countriesShowFlg', '#countries');
-    var countryTemplate = $('#country-template').html();
+    appScope.click('#quiz .show-countries', 'showCountries()');
+    appScope.hide('countriesShowFlg', '#quiz .show-countries');
+    appScope.show('countriesShowFlg', '#quiz .countries');
+    var countryTemplate = $('#quiz .country-template').html();
     appScope.repeat('dog.countries', 'country', function(scope) {
       var $row = $(countryTemplate);
       scope.bind('country', $row);
       return $row;
-    }).appendTo('#countries ul');
+    }).appendTo('#quiz .countries');
 
-    appScope.click('#show-colors', 'showColors()');
-    appScope.hide('colorsShowFlg', '#show-colors');
-    appScope.show('colorsShowFlg', '#colors');
-    var colorTemplate = '<li>';
+    appScope.click('#quiz .show-colors', 'showColors()');
+    appScope.hide('colorsShowFlg', '#quiz .show-colors');
+    appScope.show('colorsShowFlg', '#quiz .colors');
+    var colorTemplate = $('#quiz .color-template').html();
     appScope.repeat('dog.colors', 'color', function(scope) {
       var $row = $(colorTemplate);
       scope.bind('color', $row);
       return $row;
-    }).appendTo('#colors ul');
+    }).appendTo('#quiz .colors');
 
-    appScope.click('#show-characteristics', 'showCharacteristics()');
-    appScope.hide('characteristicsShowFlg', '#show-characteristics');
-    appScope.show('characteristicsShowFlg', '#characteristics');
-    var characteristicsTemplate = '<li>';
+    appScope.click('#quiz .show-characteristics', 'showCharacteristics()');
+    appScope.hide('characteristicsShowFlg', '#quiz .show-characteristics');
+    appScope.show('characteristicsShowFlg', '#quiz .characteristics');
+    var characteristicsTemplate = $('#quiz .characteristic-template').html();
     appScope.repeat('dog.characteristics', 'characteristic', function(scope) {
       var $row = $(characteristicsTemplate);
       scope.bind('characteristic', $row);
       return $row;
-    }).appendTo('#characteristics ul');
+    }).appendTo('#quiz .characteristics');
 
-    appScope.click('#show-initial-works', 'showInitialWorks()');
-    appScope.hide('initialWorksShowFlg', '#show-initial-works');
-    appScope.show('initialWorksShowFlg', '#initial-works');
-    var initialWorksTemplate = '<li>';
+    appScope.click('#quiz .show-initial-works', 'showInitialWorks()');
+    appScope.hide('initialWorksShowFlg', '#quiz .show-initial-works');
+    appScope.show('initialWorksShowFlg', '#quiz .initial-works');
+    var initialWorksTemplate = $('#quiz .initial-work-template').html();
     appScope.repeat('dog.initialWorks', 'initialWork', function(scope) {
       var $row = $(initialWorksTemplate);
       scope.bind('initialWork', $row);
       return $row;
-    }).appendTo('#initial-works ul');
+    }).appendTo('#quiz .initial-works');
 
     appScope.bind('currentNo', '#quiz .current-no');
     appScope.bind('count', '#quiz .count');
@@ -164,7 +177,7 @@ $(function() {
   })();
 
   (function() {
-    appScope.show('isFinish()', '#result');
+    appScope.show('isResultMode()', '#result');
 
     appScope.show('isPerfect()', '#result .perfect');
     appScope.show('isGreat()', '#result .great');
@@ -173,6 +186,8 @@ $(function() {
 
     appScope.bind('goodCount', '#result .good-count');
     appScope.bind('count', '#result .count');
+
+    appScope.click('#result .go-first', 'goFirst()');
   })();
 
   appScope.init();

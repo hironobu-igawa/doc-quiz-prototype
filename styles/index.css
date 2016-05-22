@@ -1,0 +1,125 @@
+html {
+  height: 100%;
+  background-color: honeydew;
+}
+
+body {
+  padding-top: 70px;
+  background-color: honeydew;
+}
+
+header .navbar-header {
+  float: none;
+  text-align: center;
+}
+
+article {
+  padding-top: 7px;
+}
+
+.ratio {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+#quiz {
+  padding-bottom: 60px;
+}
+
+#quiz .dog-image {
+  display: block;
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+#quiz table {
+  table-layout: fixed;
+}
+
+#quiz tr th:first-child {
+  width: 120px;
+}
+
+#quiz table td ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#quiz .quiz-footer .navbar-header {
+  float: none;
+  text-align: center;
+}
+
+#quiz .quiz-footer .feel-good {
+  float: left;
+  margin-left: 8px;
+}
+
+#quiz .quiz-footer .feel-bad {
+  float: right;
+  margin-right: 8px;
+}
+
+#quiz .quiz-footer .ratio {
+  float: none;
+  margin-top: 10px;
+}
+
+#result {
+  text-align: center;
+}
+
+#result .perfect {
+  display: inline-block;
+  padding: 8px;
+  font-size: 72px;
+  color: gold;
+  background-color: lightyellow;
+  border: 1px solid gold;
+  border-radius: 4px;
+}
+
+#result .great {
+  display: inline-block;
+  padding: 4px;
+  font-size: 54px;
+  color: deepskyblue;
+  background-color: aqua;
+  border: 1px solid deepskyblue;
+  border-radius: 4px;
+}
+
+#result .good {
+  display: inline-block;
+  padding: 2px;
+  font-size: 36px;
+  color: lightseagreen;
+  background-color: lightgreen;
+  border: 1px solid lightseagreen;
+  border-radius: 4px;
+}
+
+#result .bad {
+  display: inline-block;
+  padding: 0;
+  font-size: 36px;
+  color: red;
+}
+
+#result .result-footer .navbar-header {
+  float: none;
+  text-align: center;
+}
+
+#result .result-footer .go-first {
+  float: right;
+  margin-right: 8px;
+}
+
+#result .resultd-footer .ratio {
+  float: none;
+  margin-top: 10px;
+}
