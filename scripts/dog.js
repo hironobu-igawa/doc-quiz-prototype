@@ -1,7 +1,5 @@
 (function () {
-
   window.Dog = (function() {
-
     function Dog(param) {
       if (!param) return;
       this.id = param.id;
