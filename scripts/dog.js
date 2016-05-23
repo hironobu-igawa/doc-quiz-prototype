@@ -925,6 +925,352 @@
         initialWorks: [
           'アナグマ・カワウソ猟'
         ]
+      },
+      {
+        id: 117,
+        name: 'シー・ズー',
+        group: '9G',
+        countries: [
+          '中国'
+        ],
+        colors: [
+          'オールカラー'
+        ],
+        characteristics: [
+          'ショーのときはトップを結ぶ'
+        ],
+        initialWorks: [
+          '王室愛玩犬'
+        ]
+      },
+      {
+        id: 118,
+        name: 'ラサ・アプソ',
+        group: '9G',
+        countries: [
+          'チベット地方'
+        ],
+        colors: [
+          'なし'
+        ],
+        characteristics: [
+          'シー・ズーの先祖犬',
+          '豊かで硬めの直毛',
+          'ショーのときもトップを結ばない'
+        ],
+        initialWorks: [
+          '僧侶のコンパニオン'
+        ]
+      },
+      {
+        id: 119,
+        name: 'チベタン・テリア',
+        group: '9G',
+        countries: [
+          'チベット地方'
+        ],
+        colors: [
+          'オールカラー'
+        ],
+        characteristics: [
+          '長毛',
+          '毛量が多い',
+          '羊毛上の下毛'
+        ],
+        initialWorks: [
+          '警察犬'
+        ]
+      },
+      {
+        id: 120,
+        name: 'チャイニーズ・クレステッド・ドッグ',
+        group: '9G',
+        countries: [
+          '中国'
+        ],
+        colors: [
+          'オールカラー'
+        ],
+        characteristics: [
+          '頭頂・尾先・足先にのみわずかな毛があり、その他の部分は無毛',
+          'ごくまれに有毛犬が生まれることがある',
+          '有毛犬：パウダーパフ'
+        ],
+        initialWorks: [
+          'コンパニオン',
+          '宗教儀式'
+        ]
+      },
+      {
+        id: 121,
+        name: 'プードル',
+        group: '9G',
+        countries: [
+          'フランス'
+        ],
+        colors: [
+          'ホワイト',
+          'ブラック',
+          'ブラウン',
+          'グレー',
+          'シルバー',
+          'アプリコット',
+          'レッド'
+        ],
+        characteristics: [
+          '体高：45〜60cm⇨スタンダード',
+          '体高：35〜45cm⇨ミディアム',
+          '体高：28〜35cm⇨ミニチュア',
+          '体高：28cm以下⇨トイ'
+        ],
+        initialWorks: [
+          'コンパニオン'
+        ]
+      },
+      {
+        id: 122,
+        name: 'キャバリア・キング・チャールズ・スパニエル',
+        group: '9G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          'プリンスチャールズ',
+          'キングチャールズ',
+          'ブレンハイム',
+          'ルビー'
+        ],
+        characteristics: [
+          '英国王室愛玩犬'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 123,
+        name: 'キング・チャールズ・スパニエル',
+        group: '9G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          'プリンスチャールズ',
+          'キングチャールズ',
+          'ブレンハイム',
+          'ルビー'
+        ],
+        characteristics: [
+          'なし'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 124,
+        name: 'チワワ',
+        group: '9G',
+        countries: [
+          'メキシコ'
+        ],
+        colors: [
+          'オールカラー'
+        ],
+        characteristics: [
+          '長毛：ロングコート',
+          '短毛：スムースコート'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 125,
+        name: 'ブリュッセル・グリフォン',
+        group: '9G',
+        countries: [
+          'ベルギー'
+        ],
+        colors: [
+          'レッド',
+          '赤みがかった色'
+        ],
+        characteristics: [
+          '粗毛で赤毛：ブリュッセル・グリフォン',
+          '粗毛で黒毛：ベルジアン・グリフォン',
+          '短毛：プチブラバンソン'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 126,
+        name: 'フレンチ・ブルドッグ',
+        group: '9G',
+        countries: [
+          'フランス'
+        ],
+        colors: [
+          'バイド',
+          'ブリンドル',
+          'フォーン'
+        ],
+        characteristics: [
+          'コウモリ耳'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 127,
+        name: 'ペキニーズ',
+        group: '9G',
+        countries: [
+          '中国'
+        ],
+        colors: [
+          'オールカラー'
+        ],
+        characteristics: [
+          '別名：ライオンドッグ'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 128,
+        name: 'パグ',
+        group: '9G',
+        countries: [
+          '中国'
+        ],
+        colors: [
+          'フォーン',
+          'ブラック',
+          'シルバー',
+          'アプリコット'
+        ],
+        characteristics: [
+          '巻き尾',
+          'ブラックマスク'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 129,
+        name: 'パピヨン',
+        group: '9G',
+        countries: [
+          'ヨーロッパ'
+        ],
+        colors: [
+          '地色をホワイトとした全ての色'
+        ],
+        characteristics: [
+          '立ち耳：コンチネンタル・トイスパニエル・ウィズ・アップライトイヤー',
+          '垂れ耳：コンチネンタル・トイスパニエル・ウィズ・バンキングイヤー'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 130,
+        name: 'ビジョン・フリーゼ',
+        group: '9G',
+        countries: [
+          'フランス',
+          'ベルギー'
+        ],
+        colors: [
+          '純白'
+        ],
+        characteristics: [
+          '全身をパウダーパフのようにトリミングする'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 131,
+        name: 'ボロニーズ',
+        group: '9G',
+        countries: [
+          'イタリアのボロニーズ地方'
+        ],
+        colors: [
+          'ピュアホワイト'
+        ],
+        characteristics: [
+          'なし'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 132,
+        name: 'マルチーズ',
+        group: '9G',
+        countries: [
+          'マルタ共和国'
+        ],
+        colors: [
+          '純白'
+        ],
+        characteristics: [
+          'なし'
+        ],
+        initialWorks: [
+          'なし'
+        ]
+      },
+      {
+        id: 133,
+        name: '狆',
+        group: '9G',
+        countries: [
+          '日本'
+        ],
+        colors: [
+          '白地に黒か赤の斑'
+        ],
+        characteristics: [
+          '別名：ジャパニーズ・チン'
+        ],
+        initialWorks: [
+          'コンパニオン'
+        ]
+      },
+      {
+        id: 134,
+        name: 'ボストン・テリア',
+        group: '9G',
+        countries: [
+          'アメリカ'
+        ],
+        colors: [
+          'ブラック',
+          'ホワイト&ブリンドル',
+          'シール'
+        ],
+        characteristics: [
+          'タキシードを着た紳士',
+          'コウモリ耳',
+          'スクリュー尾',
+          'ボストンマーク'
+        ],
+        initialWorks: [
+          'ねずみ捕り',
+          'コンパニオン'
+        ]
       }
     ];
 
