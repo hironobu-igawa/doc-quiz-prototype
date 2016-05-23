@@ -927,6 +927,217 @@
         ]
       },
       {
+        id: 106,
+        name: 'コーイケル・ホンディエ',
+        group: '8G',
+        countries: [
+          'オランダ'
+        ],
+        colors: [
+          '白地にオレンジ・レッドの斑'
+        ],
+        characteristics: [
+          'ほぼスクエアなボディ',
+          '尾に豊富な飾り気がある',
+          'ケネル犬：アム'
+        ],
+        initialWorks: [
+          '鳥獣のフラッシング、回収'
+        ]
+      },
+      {
+        id: 107,
+        name: 'ラブラドール・レトリーバー',
+        group: '8G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          'イエロー',
+          'ブラック',
+          'チョコレート'
+        ],
+        characteristics: [
+          '警察犬',
+          '盲導犬',
+          '救助犬',
+          'ケネル犬：ルナ、紬',
+          '血統書名：ツムギ・オブ・ヒスビバーチェ・JP'
+        ],
+        initialWorks: [
+          'ガンドッグ'
+        ]
+      },
+      {
+        id: 108,
+        name: 'ゴールデン・レトリーバー',
+        group: '8G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          'ゴールド',
+          'クリーム'
+        ],
+        characteristics: [
+          '警察犬',
+          '盲導犬',
+          '救助犬'
+        ],
+        initialWorks: [
+          'ゲームの捜索、回収'
+        ]
+      },
+      {
+        id: 109,
+        name: 'フラットコーテッド・レトリーバー',
+        group: '8G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          'ブラック',
+          'レバー'
+        ],
+        characteristics: [
+          'なし'
+        ],
+        initialWorks: [
+          'ゲームの捜索、回収'
+        ]
+      },
+      {
+        id: 110,
+        name: 'カーリーコーテッド・レトリーバー',
+        group: '8G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          'ブラック',
+          'レバー'
+        ],
+        characteristics: [
+          '厚い被毛',
+          '防水性のある被毛'
+        ],
+        initialWorks: [
+          '水禽猟での獲物の捜索、回収'
+        ]
+      },
+      {
+        id: 111,
+        name: 'チェサピーク・ベイ・レトリーバー',
+        group: '8G',
+        countries: [
+          'アメリカ',
+          'カナダ'
+        ],
+        colors: [
+          'ダークブラウン',
+          'デッドグラス'
+        ],
+        characteristics: [
+          '足に水かきがある',
+          'やや脂性で防水性のある被毛'
+        ],
+        initialWorks: [
+          '水禽猟での獲物の捜索、回収'
+        ]
+      },
+      {
+        id: 112,
+        name: 'ノヴァ・スコシア・ダック・トーリング・レトリーバー',
+        group: '8G',
+        countries: [
+          'カナダ'
+        ],
+        colors: [
+          'レッド',
+          'オレンジ'
+        ],
+        characteristics: [
+          'レトリーバーの中で最も小さい'
+        ],
+        initialWorks: [
+          '水禽のフラッシング、回収'
+        ]
+      },
+      {
+        id: 113,
+        name: 'アメリカン・コッカー・スパニエル',
+        group: '8G',
+        countries: [
+          'アメリカ'
+        ],
+        colors: [
+          'ブラック・バラエティ',
+          'アスコブ・バラエティ',
+          'パーティカラー・バラエティ'
+        ],
+        characteristics: [
+          '断尾',
+          'マズルが短い'
+        ],
+        initialWorks: [
+          '小型ゲームの回収'
+        ]
+      },
+      {
+        id: 114,
+        name: 'イングリッシュ・コッカー・スパニエル',
+        group: '8G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          'オールカラー'
+        ],
+        characteristics: [
+          '断尾'
+        ],
+        initialWorks: [
+          '小型ゲームの回収'
+        ]
+      },
+      {
+        id: 115,
+        name: 'イングリッシュ・スプリンガー・スパニエル',
+        group: '8G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          'ブラック&ホワイト',
+          'レバー&ホワイト'
+        ],
+        characteristics: [
+          '断尾'
+        ],
+        initialWorks: [
+          '鳥獣のフラッシング、回収'
+        ]
+      },
+      {
+        id: 116,
+        name: 'クランバー・スパニエル',
+        group: '8G',
+        countries: [
+          'イギリス'
+        ],
+        colors: [
+          '白地にレモンの斑',
+          '白地にオレンジの斑'
+        ],
+        characteristics: [
+          '断尾',
+          '胴長で頭が大きめ'
+        ],
+        initialWorks: [
+          'ゲームの捜索、回収'
+        ]
+      },
+      {
         id: 117,
         name: 'シー・ズー',
         group: '9G',
