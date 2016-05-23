@@ -931,7 +931,7 @@
     Dog.query = function() {
       return Dog.data
         .map(function(d) {return new Dog(d)})
-        .sort(function(d) {return d.id - d.id});
+        .sort(function(a, b) {return a.id - b.id});
     };
 
     Dog.shuffle = function(limit) {
