@@ -818,7 +818,7 @@
         ],
         characteristics: [
           '額、頬、尾の付け根のシワ',
-          '独特な形尾のマズル'
+          '独特な形のマズル'
         ],
         initialWorks: [
           'なし'
@@ -878,7 +878,7 @@
           'グリズル'
         ],
         characteristics: [
-          '断耳',
+          '断尾',
           '立ち耳'
         ],
         initialWorks: [
